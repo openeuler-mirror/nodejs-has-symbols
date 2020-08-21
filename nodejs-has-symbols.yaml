@@ -1,0 +1,5 @@
+git_url: https://github.com/inspect-js/has-symbols
+version_control: github
+src_repo: inspect-js/has-symbols
+tag_prefix: "^v"
+seperator: "."
