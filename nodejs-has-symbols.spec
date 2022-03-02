@@ -1,7 +1,7 @@
 %{?nodejs_find_provides_and_requires}
 Name:                nodejs-has-symbols
 Version:             1.0.0
-Release:             1
+Release:             2
 Summary:             Determine if the JS environment has Symbol support
 License:             MIT
 URL:                 https://www.npmjs.com/package/has-symbols
@@ -26,7 +26,7 @@ cp -pr package.json index.js shams.js %{buildroot}%{nodejs_sitelib}/has-symbols
 %check
 %nodejs_symlink_deps --check
 %__nodejs test
-%__nodejs --harmony --es-staging test
+%__nodejs --harmony  test
 %__nodejs test/shams/get-own-property-symbols.js
 %__nodejs test/shams/core-js.js
 
@@ -36,5 +36,9 @@ cp -pr package.json index.js shams.js %{buildroot}%{nodejs_sitelib}/has-symbols
 %{nodejs_sitelib}/has-symbols
 
 %changelog
+* Thu Mar 01 2022 Yongqing chen <chenyongqingdl@gmail.com> - 1.0.0-2
+- Delete --es-staging option 
+
 * Thu Aug 20 2020 wangxiao <wangxiao65@huawei.com> - 1.0.0-1
 - Package init
+
